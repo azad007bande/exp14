@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete CSS Example</title>
+  <style>
+    /* HEADER STYLING */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* NAVIGATION LINKS WITH HOVER EFFECT */
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff9800; /* changes color on hover */
+    }
+
+    /* FOOTER STYLING */
+    footer {
+      background-color: #222;
+      color: #ccc;
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* BUTTON WITH HOVER EFFECT */
+    .button {
+      background-color: #4CAF50;   /* green background */
+      color: white;                /* white text */
+      padding: 12px 24px;          /* spacing */
+      border: none;                /* no border */
+      border-radius: 6px;          /* rounded corners */
+      cursor: pointer;             /* pointer on hover */
+      font-size: 16px;
+      transition: all 0.3s ease;   /* smooth hover effect */
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background-color: #45a049;   /* darker green */
+      transform: scale(1.05);      /* slightly larger */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* subtle shadow */
+    }
+
+    /* MAIN CONTENT BACKGROUND */
+    .content {
+      position: relative;
+      padding: 40px;
+      text-align: center;
+      background-image: url('Mclaren.jpg'); /* replace with your image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 400px;
+      color: white; /* makes text stand out */
+    }
+
+    /* Overlay for readability */
+    .content::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4); /* semi-transparent dark overlay */
+      z-index: 0;
+    }
+
+    .content * {
+      position: relative;
+      z-index: 1; /* keeps text above overlay */
+    }
+
+    /* MEDIA QUERY EXAMPLE */
+    @media (max-width: 768px) {
+      header, footer {
+        text-align: left;
+        padding: 10px;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .button {
+        width: 100%; /* full width button on mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>My Website</h1>
+    <nav>
+      <a href="page1.html">Home</a>
+      <a href="page2.html">About</a>
+      <a href="buypage.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+    <h2>Welcome to the Demo Page</h2>
+    <p>This page demonstrates header, footer, hover effects, media queries, and a background image.</p>
+    <button class="button">Hover Me</button>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 My Website</p>
+  </footer>
+
+</body>
+</html>
